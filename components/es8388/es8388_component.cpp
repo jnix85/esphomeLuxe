@@ -73,8 +73,10 @@ void ES8388Component::setup() {
    this->write_byte(19, 0xC0);
    this->write_byte(20, 0x12);  
    this->write_byte(21, 0x06);   
-   this->write_byte(22, 0xC3);      
- */ 
+*/   
+// Noise gate -76.5 dB  
+   this->write_byte(22, 0x03);      
+ 
  //ADC power  
   this->write_byte(3,0x00);
   this->write_byte(0x02, 0xF0);
