@@ -67,14 +67,14 @@ void ES8388Component::setup() {
    // ADC attenuation 0 dB   
    this->write_byte(16,0x00);
    this->write_byte(17,0x00);
-
+/*
 //ALC (optimized for voice)
    this->write_byte(18, 0xE2);
    this->write_byte(19, 0xC0);
    this->write_byte(20, 0x12);  
    this->write_byte(21, 0x06);   
    this->write_byte(22, 0xC3);      
-  
+ */ 
  //ADC power  
   this->write_byte(3,0x00);
   this->write_byte(0x02, 0xF0);
