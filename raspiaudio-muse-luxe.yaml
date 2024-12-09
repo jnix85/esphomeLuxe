@@ -99,10 +99,13 @@ microphone:
     adc_type: external
     pdm: false
 
+    
 voice_assistant:
   id: va
   microphone: luxe_microphone
+  media_player: luxe_out
   use_wake_word: true
+  conversation_timeout: 600s
   on_listening:
     - light.turn_on:
         id: top_led
@@ -166,6 +169,7 @@ voice_assistant:
         if (code == "wake-provider-missing" || code == "wake-engine-missing") {
           id(use_wake_word).turn_off();
         }
+
 sensor:
   - platform: adc
     pin: GPIO33
