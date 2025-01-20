@@ -86,8 +86,16 @@ void ES8388Component::setup() {
   this->write_byte(0x04, 0x30);
   this->write_byte(0x03, 0x00);
   // DAC volume max
+
+  //fully differential output Left -L1/R1
   this->write_byte(0x2E, 0x21);
   this->write_byte(0x2F, 0x21);
+
+    //fully differential output Right -L2/R2
+  this->write_byte(0x30, 0x21);
+  this->write_byte(0x31, 0x21);
+
+  
   // unmute
   this->write_byte(0x19, 0x00);
 }
