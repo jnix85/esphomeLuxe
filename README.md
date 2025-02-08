@@ -12,15 +12,15 @@ Discover the enhancements in the latest release of MicroWWPlus!
 
 - **Micro Wake Words**: Now supports multiple wake words like "Hey Jarvis". Customize it further by modifying the YAML configuration.
 
-## ESPHome Radio for Raspiaudio Muse Radio
+## ESPHome for Raspiaudio Muse Luxe
 
-This project is designed to enhance your experience with the **Raspiaudio Muse Radio**. Follow the instructions below to get started.
+This project is designed to enhance your experience with the **Raspiaudio Muse Luxe**. Follow the instructions below to get started.
 
 ### Flashing Your Device
 
 1. Open **Google Chrome**.
 2. Navigate to [apps.raspiaudio.com](https://apps.raspiaudio.com).
-3. Choose **Muse Radio - Home Assistant** and follow the on-screen instructions.
+3. Choose **Muse Luxe - Home Assistant** and follow the on-screen instructions.
 4. Connect to the device's access point with these credentials:
    - **SSID**: Raspiaudio-Luxe
    - **Password**: 12345678
