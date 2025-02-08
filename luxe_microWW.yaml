@@ -48,10 +48,10 @@ esp32:
 micro_wake_word:
   id: mww
   models:
-    - model: okay_nabu
-#      id: okat_nabu
-#    - model: hey_jarvis
-#      id: hey_jarvis
+#    - model: okay_nabu
+#      id: okay_nabu
+    - model: hey_jarvis
+#        id: hey_jarvis
 #    - model: hey_mycroft
 #      id: hey_mycroft
 #    - model: alexa
@@ -68,6 +68,8 @@ ota:
 api:
 
 wifi:
+  power_save_mode: none
+  output_power: 15
   ap:
      ssid: "Raspiaudio-luxe"
      password: "12345678"
