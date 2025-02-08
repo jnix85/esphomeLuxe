@@ -1,38 +1,41 @@
 # Raspiaudio Muse Luxe Voice Satellite
 
-([https://youtu.be/GGey_L-3grk?si=UijGHBHlDbeWeOZH](https://www.youtube.com/watch?v=iLQuCf8FqXM))
+[![Video Guide](https://img.youtube.com/vi/iLQuCf8FqXM/0.jpg)](https://www.youtube.com/watch?v=iLQuCf8FqXM)
 
+Welcome to the Raspiaudio Muse Luxe Voice Satellite project! This guide will help you get started with your device, including setup instructions, source code information, and support options.
 
+## Introducing the New Version: MicroWWPlus
 
-## New Version: microWWPlus
+Discover the enhancements in the latest release of MicroWWPlus!
 
 ### New Features:
 
-1. **Micro Wake Words**: Supports multiple wake words Hey Jarvis. If you want to enable another one, you'll need to edit the YAML configuration.
-   
+- **Micro Wake Words**: Now supports multiple wake words like "Hey Jarvis". Customize it further by modifying the YAML configuration.
 
 ## ESPHome Radio for Raspiaudio Muse Radio
 
-This project is intended for the **Raspiaudio Muse Radio**.
+This project is designed to enhance your experience with the **Raspiaudio Muse Radio**. Follow the instructions below to get started.
 
 ### Flashing Your Device
 
 1. Open **Google Chrome**.
-2. Visit [apps.raspiaudio.com](https://apps.raspiaudio.com).
-3. Select **Muse Radio - Home Assistant** and follow the on-screen instructions.
-4. Connect to the access point created by the device with the following credentials:
-   - SSID: "Raspiaudio-Luxe"
-   - Password: "12345678"
-5. Open a webpage at `192.168.4.1` to set your home Wi-Fi credentials.
+2. Navigate to [apps.raspiaudio.com](https://apps.raspiaudio.com).
+3. Choose **Muse Radio - Home Assistant** and follow the on-screen instructions.
+4. Connect to the device's access point with these credentials:
+   - **SSID**: Raspiaudio-Luxe
+   - **Password**: 12345678
+5. Access `192.168.4.1` in your browser to configure your home Wi-Fi settings.
 
 ### Source Code
 
-The source code is available on GitHub: https://github.com/RASPIAUDIO/esphomeLuxe To recompile, ensure you perform a full build clean in ESPHome first.
+Explore and contribute to the project on GitHub: [esphomeLuxe Repository](https://github.com/RASPIAUDIO/esphomeLuxe). For recompilation, ensure to perform a full build clean in ESPHome first.
 
 ### Forum & Support
 
-For discussions and support, visit https://forum.raspiaudio.com/t/muse-luxe-voice-assistant-now-possible/726/209
+Join our community for discussions and support: [Raspiaudio Forum Thread](https://forum.raspiaudio.com/t/muse-luxe-voice-assistant-now-possible/726/209)
 
 ### Step-by-Step Video Guide
 
-For a detailed video tutorial, watch this [**step-by-step guide**](https://youtu.be/QDDjXAWuk0E). 
+For a comprehensive walkthrough, watch our [Step-by-Step Video Guide](https://youtu.be/QDDjXAWuk0E).
+
+We hope you enjoy using your Raspiaudio Muse Luxe Voice Satellite! For any further assistance, feel free to reach out via the forum.
