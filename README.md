@@ -11,11 +11,6 @@
 1. **Micro Wake Words**: Supports multiple wake words Hey Jarvis. If you want to enable another one, you'll need to edit the YAML configuration.
    
 
-
----
-
-This ESPHome configuration transforms the [Raspiaudio Muse Radio](https://raspiaudio.com/product/muse-radio/) into a [Home Assistant](https://www.home-assistant.io/) voice satellite.
-
 ## ESPHome Radio for Raspiaudio Muse Radio
 
 This project is intended for the **Raspiaudio Muse Radio**.
