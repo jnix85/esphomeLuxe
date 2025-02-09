@@ -76,6 +76,8 @@ ota:
 api:
 
 wifi:
+  power_save_mode: none
+  output_power: 15
   ap:
      ssid: "Raspiaudio-luxe"
      password: "12345678"
