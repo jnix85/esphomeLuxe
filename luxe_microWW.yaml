@@ -1,12 +1,7 @@
 substitutions:
   name: muse-luxe
   friendly_name: Raspiaudio Muse Luxe
-#States  
-  P_waiting: "1"
-  P_playing: "2"
-  P_listening: "3"
-  P_answering: "4"
-  
+
 esphome:
   name: ${name}
   friendly_name: ${friendly_name}
@@ -22,12 +17,9 @@ esphome:
           effect: slow_pulse
           red: 100%
           green: 60%
-          blue: 0%   
-      - if:
-         condition:
-             switch.is_on: use_wake_word
-         then:                     
-           - micro_wake_word.start:    
+          blue: 0%
+      - micro_wake_word.start:    
+
             
 external_components:
   - source: github://RASPIAUDIO/esphomeLuxe@main
@@ -57,9 +49,9 @@ micro_wake_word:
   id: mww
   models:
 #    - model: okay_nabu
-#      id: okat_nabu
+#      id: okay_nabu
     - model: hey_jarvis
-#      id: hey_jarvis
+#        id: hey_jarvis
 #    - model: hey_mycroft
 #      id: hey_mycroft
 #    - model: alexa
@@ -243,7 +235,7 @@ binary_sensor:
         input: true
         pullup: true
     name: Action
-    on_click:       
+    on_click:
       - if:
           condition:
             and:
@@ -257,12 +249,6 @@ binary_sensor:
                   - script.execute: reset_led
                 else:
                   - voice_assistant.start:
-# STOP                                   
-      - if:
-         condition:
-            lambda: 'return(id(phase) == 2);'
-         then:        
-          - media_player.stop: 
 
 
 light:
@@ -338,12 +324,6 @@ media_player:
       - resampler
       - adf_i2s_out  
     on_play: 
-    
-      - if:
-         condition:
-             switch.is_on: use_wake_word
-         then:                     
-           - micro_wake_word.stop:    
       - if:
            condition:
                 lambda: 'return(id(phase) != 2);'
@@ -352,6 +332,7 @@ media_player:
               - lambda: |-
                    if(id(phase) == 1)  id(phase) = 2;    
               - script.execute: mute_off         
+              - micro_wake_word.stop:
               - script.execute: reset_led    
               
     on_idle:
@@ -360,18 +341,10 @@ media_player:
               lambda: 'return((id(phase) == 4) || (id(phase) == 2));'
           then:
             - lambda: |-
-                 id(phase) = 1; 
-      - if:
-         condition:
-             switch.is_on: use_wake_word
-         then:                     
-           - micro_wake_word.start:                                                
-      - script.execute: reset_led     
-      
-                      
-
-  
-                                 
+                 id(phase) = 1;   
+            - micro_wake_word.start:                       
+            - script.execute: reset_led                     
+              
                 
 voice_assistant:
     id: va
@@ -387,12 +360,7 @@ voice_assistant:
         green: 0%
         brightness: 100%
         effect: pulse  
-        
-     - if:
-         condition:
-             switch.is_off: use_wake_word
-         then:                        
-           - micro_wake_word.stop:
+     - micro_wake_word.stop:
      - lambda: |-
         id(phase) = 3;                      
 #     - script.execute: reset_led
@@ -436,7 +404,8 @@ voice_assistant:
 #########
 # Scripts
 
-script:         
+script:   
+       
   - id: reset_led
     then:
       - if:
