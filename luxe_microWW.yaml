@@ -56,9 +56,9 @@ esp32:
 micro_wake_word:
   id: mww
   models:
-    - model: okay_nabu
+#    - model: okay_nabu
 #      id: okat_nabu
-#    - model: hey_jarvis
+    - model: hey_jarvis
 #      id: hey_jarvis
 #    - model: hey_mycroft
 #      id: hey_mycroft
