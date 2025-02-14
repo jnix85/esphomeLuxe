@@ -30,7 +30,7 @@ esphome:
            - micro_wake_word.start:    
             
 external_components:
-  - source: github://RASPIAUDIO/esphomeLuxe@main
+  - source: github://jnix85/esphomeLuxe@13feb2025
     components: [es8388]
     refresh: 0s
   - source:
@@ -366,11 +366,6 @@ media_player:
          then:                     
            - micro_wake_word.start:                                                
       - script.execute: reset_led     
-      
-                      
-
-  
-                                 
                 
 voice_assistant:
     id: va

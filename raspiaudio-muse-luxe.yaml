@@ -42,7 +42,7 @@ captive_portal:
 improv_serial:
 
 external_components:
-  - source: github://RASPIAUDIO/esphomeLuxe@main
+  - source: github://jnix85/esphomeLuxe@13feb2025
     components: [es8388]
     refresh: 0s
 
@@ -74,8 +74,6 @@ interval:
                 blue: 0%
             - delay: 1s
             - light.turn_off: top_led
-
-
 
 i2s_audio:
   - i2s_lrclk_pin: GPIO25
